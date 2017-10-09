@@ -29,7 +29,9 @@ public class MainActivity extends AppCompatActivity implements ZXingScannerView.
         super.onCreate(savedInstanceState);
 
         scannerView = new ZXingScannerView(this);
-        setContentView(scannerView);
+        setContentView(R.layout.activity_main);
+        Intent intent = new Intent(this,GeneratorActivity.class);
+        startActivity(intent);
 
         if(Build.VERSION.SDK_INT >= Build.VERSION_CODES.M){
             if (checkPermission()){
